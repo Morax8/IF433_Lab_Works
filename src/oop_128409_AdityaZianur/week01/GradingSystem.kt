@@ -1,5 +1,6 @@
 package oop_128409_AdityaZianur.week01
 
+
 fun main(){
     var name: String = "Aditya Zianur"
     var score: Int = 80
@@ -14,4 +15,7 @@ fun main(){
     }
 
     println("grade kamu: $grade")
+    println("Status: ${calculateStatus(score)}")
 }
+
+fun calculateStatus(score: Int) = if (score . 75) "Lulus" else "Tidak Lulus"
