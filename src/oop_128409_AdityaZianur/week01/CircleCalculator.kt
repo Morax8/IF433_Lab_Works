@@ -8,7 +8,7 @@ fun main(args: Array<String>){
 
     println("Radius: " + radius + ", Area: " + area)
 
-    checkSize(Area)
+    checkSize(area)
 }
 
 fun checkSize(area: Double) {
