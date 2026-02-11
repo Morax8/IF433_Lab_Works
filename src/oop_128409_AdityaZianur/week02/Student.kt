@@ -13,4 +13,6 @@ class Student(
             println("LOG: Objek Student $name berhasil di alokasikan di memori")
         }
     }
+
+    constructor(name: String, nim: String) : this(name, nim, "")
 }
