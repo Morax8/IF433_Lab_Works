@@ -1,5 +1,7 @@
 package oop_128409_AdityaZianur.week02
 
+import java.util.Scanner
+
 class Hero(
     val name: String,
     val baseDamage: Int,
@@ -21,4 +23,11 @@ class Hero(
     fun isAlive(): Boolean {
         return hp > 0
     }
+}
+
+fun main(){
+    val sc = Scanner(System.`in`)
+    var enemyHP = 100
+    val enemyName = "The Void King"
+
 }
