@@ -9,6 +9,6 @@ fun main(){
 
    e.increasePerformance()
 
-    
+
    println("Pajak yang harus dibayar: ${e.tax}")
 }
