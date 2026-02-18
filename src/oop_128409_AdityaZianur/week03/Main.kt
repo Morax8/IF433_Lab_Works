@@ -13,13 +13,16 @@ fun main(){
 //   println("Pajak yang harus dibayar: ${e.tax}")
 
     val wp = Weapon("Axe of Destiny")
+    val p1 = Player("Zian")
 
-    // 1. Coba set damage ke -50 (Harus gagal/tetap nilai lama)
     wp.damage = -50
 
-    // 2. Set damage ke 9999 (Harus terpaksa jadi 1000)
     wp.damage = 9999
 
-    // 3. Print Tier-nya
     println("Tier senjata saat ini: ${wp.tier}")
+
+    p1.addXp(50)
+    println("Level saat ini: ${p1.level}")
+
+    p1.addXp(60)
 }
