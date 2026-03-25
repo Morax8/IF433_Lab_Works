@@ -39,5 +39,13 @@ fun main(){
 //    }
 
     GameManager.startGame()
-    GameManager.startGame()
+    println("Drop chance item LEGENDARY adalah: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val playerSword = Weapon.forgeStarterSword()
+
+    println("Senjata awal pemain berhasil dibuat!")
+    println("Nama: ${playerSword.item.name}")
+    println("Damage: ${playerSword.item.damage}")
+    println("Rarity: ${playerSword.item.rarity}")
+    println("Durability: ${playerSword.durability}")
 }
