@@ -48,4 +48,12 @@ fun main(){
     println("Damage: ${playerSword.item.damage}")
     println("Rarity: ${playerSword.item.rarity}")
     println("Durability: ${playerSword.durability}")
+
+    val upgradedSwordItem = playerSword.item.copy(damage = 25)
+
+    println("\n--- Memulai Simulasi Event ---")
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedSwordItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
