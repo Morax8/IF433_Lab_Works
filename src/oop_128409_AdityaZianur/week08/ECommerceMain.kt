@@ -19,6 +19,7 @@ fun main() {
             }
         } catch (e: IllegalArgumentException) {
             println("Log Warning: Data korup tertangkap - ${e.message}")
+            
         }
     }
 }
