@@ -33,4 +33,10 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
+
+    // Format Summary dengan with
+    with(homeDevices) {
+        println("\n=== SMART HOME SUMMARY ===")
+        println("Total perangkat terdaftar: ${this.size}")
+    }
 }
