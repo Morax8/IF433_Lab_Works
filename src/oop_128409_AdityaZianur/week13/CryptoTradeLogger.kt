@@ -7,6 +7,15 @@ data class TradeRecord(val id: Int, val symbol: String, val type: String, val ma
 
 fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
 
+fun loadTrades(path: String): List<TradeRecord> {
+    return try {
+        File(path).readLines().mapNotNull { fromCsvTrade(it) }
+    } catch (e: FileNotFoundException) {
+        println("Error: File tidak ditemukan!")
+        emptyList()
+    }
+}
+
 fun saveTrades(trades: List<TradeRecord>, path: String) {
     File(path).printWriter().use { writer ->
         trades.forEach { writer.println(it.toCsv()) }
