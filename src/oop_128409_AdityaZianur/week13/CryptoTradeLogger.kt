@@ -34,6 +34,9 @@ fun main() {
 
     File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
     println("Data korup berhasil di-inject untuk pengujian robustness.")
+
+    val loadedData = loadTrades(path = "crypto_trades.csv")
+    val totalPnl = loadedData.sumOf { it.pnl }
 }
 
 fun fromCsvTrade(line: String): TradeRecord? {
