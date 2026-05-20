@@ -31,6 +31,9 @@ fun main() {
 
     saveTrades(trades, path = "crypto_trades.csv")
     println("Trade records berhasil disimpan ke crypto_trades.csv")
+
+    File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+    println("Data korup berhasil di-inject untuk pengujian robustness.")
 }
 
 fun fromCsvTrade(line: String): TradeRecord? {
