@@ -7,6 +7,12 @@ data class TradeRecord(val id: Int, val symbol: String, val type: String, val ma
 
 fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
 
+fun saveTrades(trades: List<TradeRecord>, path: String) {
+    File(path).printWriter().use { writer ->
+        trades.forEach { writer.println(it.toCsv()) }
+    }
+}
+
 fun fromCsvTrade(line: String): TradeRecord? {
     return try {
         val parts = line.split(",")
